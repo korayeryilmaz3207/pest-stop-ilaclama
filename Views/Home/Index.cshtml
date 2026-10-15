@@ -1,0 +1,241 @@
+﻿@{
+    ViewData["Title"] = "Pest Stop İlaçlama";
+}
+<style>
+    body {
+        background-image: url('/img/arkaplan.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* Ana container'ın beyazlığını tamamen şeffaf yapıyoruz */
+    .container {
+        background-color: transparent !important;
+    }
+
+    /* Kartların arka planını hafif şeffaf beyaz yapıyoruz ki arkadaki böcekler arkasından görünsün ama yazılar okunabilsin */
+    .card {
+        background-color: rgba(255, 255, 255, 0.75) !important; /* %75 şeffaflık */
+        backdrop-filter: blur(5px); /* Arkadaki görseli hafif buğulu göstererek yazıları okunur kılar */
+    }
+
+    /* Liste elemanlarının da arka planını şeffaf yapıyoruz */
+    .list-group-item {
+        background-color: transparent !important;
+    }
+</style>
+
+<div class="container py-4">
+    <!-- Logo ve Başlık Alanı -->
+    <div class="text-center mb-5">
+        <img src="~/img/logo.jpeg" alt="Pest Stop İlaçlama Logosu" style="max-height: 160px;" class="img-fluid mb-3 shadow-sm rounded" />
+        <h1 class="display-5 fw-bold text-dark">PEST STOP İLAÇLAMA</h1>
+        <p class="lead text-muted mb-2">Profesyonel Haşere ve İlaçlama Hizmetleri</p>
+
+        <!-- İşletme Sahibi ve Ziraat Mühendisi Bilgisi -->
+        <div class="mb-4">
+            <h4 class="fw-bold text-dark mb-1">Faruk ERYILMAZ</h4>
+            <h4 class="fw-bold text-dark mb-0">Ziraat Mühendisi</h4>
+        </div>
+
+        <!-- WhatsApp Butonu -->
+        <div class="mt-2">
+            <a href="https://wa.me/905354476448?text=Merhaba,%20bilgi%20almak%20istiyorum."
+               target="_blank"
+               class="btn btn-success btn-lg shadow px-4 py-2 rounded-pill">
+                <i class="bi bi-whatsapp"></i> WhatsApp ile Hemen İletişime Geç
+            </a>
+        </div>
+    </div>
+
+    <!-- Çalışma Saatleri ve Hizmetler Yan Yana Grid Yapısı -->
+    <div class="row g-4 justify-content-center mb-5">
+
+        <!-- Çalışma Saatleri -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm border-0 h-100 rounded-4 overflow-hidden">
+                <div class="card-header bg-dark text-white text-center py-3">
+                    <h5 class="mb-0 fw-semibold">Çalışma Saatlerimiz</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <span>Pazartesi</span>
+                        <span class="badge bg-success rounded-pill">00:00 - 24:00 (Açık)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <span>Salı</span>
+                        <span class="badge bg-success rounded-pill">00:00 - 24:00 (Açık)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <span>Çarşamba</span>
+                        <span class="badge bg-success rounded-pill">00:00 - 24:00 (Açık)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <span>Perşembe</span>
+                        <span class="badge bg-success rounded-pill">00:00 - 24:00 (Açık)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <span>Cuma</span>
+                        <span class="badge bg-success rounded-pill">00:00 - 24:00 (Açık)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                        <span>Cumartesi</span>
+                        <span class="badge bg-success rounded-pill">00:00 - 24:00 (Açık)</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3 text-danger">
+                        <span>Pazar</span>
+                        <span class="badge bg-secondary rounded-pill">Kapalı</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Hizmetlerimiz -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm border-0 h-100 rounded-4 overflow-hidden">
+                <div class="card-header bg-success text-white text-center py-3">
+                    <h5 class="mb-0 fw-semibold">Hizmetlerimiz</h5>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-center p-4">
+                    <div class="d-grid gap-3">
+                        <div class="p-3 bg-light rounded text-center fw-bold text-dark border shadow-sm">🏠 EV İLAÇLAMA</div>
+                        <div class="p-3 bg-light rounded text-center fw-bold text-dark border shadow-sm">🏢 APARTMAN İLAÇLAMA</div>
+                        <div class="p-3 bg-light rounded text-center fw-bold text-dark border shadow-sm">🍞 FIRIN İLAÇLAMA</div>
+                        <div class="p-3 bg-light rounded text-center fw-bold text-dark border shadow-sm">🏨 OTEL İLAÇLAMA</div>
+                        <div class="p-3 bg-light rounded text-center fw-bold text-dark border shadow-sm">🍽️ RESTAURANT İLAÇLAMA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sıkça Sorulan Sorular Alanı -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card-header bg-dark text-white text-center py-3">
+                    <h5 class="mb-0 fw-semibold">Sıkça Sorulan Sorular</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="accordion" id="sssAccordion">
+
+                        <!-- Soru 1 -->
+                        <div class="accordion-item mb-2 border rounded overflow-hidden">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    İlaçlama öncesinde evi veya iş yerini boşaltmak gerekiyor mu?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#sssAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Genellikle ev/iş yerini tamamen terk etmeniz gerekmez. Uygulanan yönteme (jel, sıvı püskürtme vb.) bağlı olarak kısa bir süre (1-2 saat) ortamdan uzak durulması veya sonrasında havalandırılması yeterlidir. Detaylı bilgi için bizimle iletişime geçebilirsiniz.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Soru 2 -->
+                        <div class="accordion-item mb-2 border rounded overflow-hidden">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Kullanılan ilaçlar insan sağlığına veya evcil hayvanlara zarar verir mi?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#sssAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Ziraat mühendisimiz denetiminde, Sağlık Bakanlığı onaylı ve çevre dostu profesyonel ilaçlar kullanılmaktadır. Doğru uygulandığında insan sağlığına ve evcil hayvanlara zarar vermez.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Soru 3 -->
+                        <div class="accordion-item mb-2 border rounded overflow-hidden">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    İlaçlama işlemi ortalama ne kadar sürer?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#sssAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Mekanın büyüklüğüne ve haşere yoğunluğuna bağlı olarak değişiklik göstermekle birlikte, standart bir daire veya iş yeri ortalama 20-40 dakika içerisinde profesyonelce ilaçlanır.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Soru 4 -->
+                        <div class="accordion-item border rounded overflow-hidden">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Hangi bölgelere ve hangi saatlerde hizmet veriyorsunuz?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#sssAccordion">
+                                <div class="accordion-body text-secondary">
+                                    Pazar günü hariç haftanın 6 günü 24 saat kesintisiz olarak kurumsal ve bireysel ilaçlama hizmeti sunmaktayız.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeri / Uygulama Görselleri Alanı -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card-header bg-success text-white text-center py-3">
+                    <h5 class="mb-0 fw-semibold">Uygulama Görsellerimiz</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-3">
+                        <!-- Görsel 1 -->
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm overflow-hidden h-100">
+                                <img src="~/img/uygulama1.png" class="card-img-top object-fit-cover" style="height: 200px;" alt="Ev İlaçlama Uygulaması">
+                                <div class="card-body text-center p-2">
+                                    <small class="text-muted fw-semibold">Açık Alan İlaçlama</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Görsel 2 -->
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm overflow-hidden h-100">
+                                <img src="~/img/uygulama2.png" class="card-img-top object-fit-cover" style="height: 200px;" alt="Apartman İlaçlama Uygulaması">
+                                <div class="card-body text-center p-2">
+                                    <small class="text-muted fw-semibold">Apartman Ortak Alan</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Görsel 3 -->
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm overflow-hidden h-100">
+                                <img src="~/img/uygulama3.png" class="card-img-top object-fit-cover" style="height: 200px;" alt="İş Yeri İlaçlama Uygulaması">
+                                <div class="card-body text-center p-2">
+                                    <small class="text-muted fw-semibold">İş Yeri & Restoran</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Haritalar Alanı -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+                <div class="card-header bg-secondary text-white text-center py-2">
+                    <h6 class="mb-0">Konumumuz</h6>
+                </div>
+                <div class="ratio ratio-16x9">
+                    <!-- Kendi harita iframe kodunu buraya yapıştırabilirsin -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.934366434401!2d30.703949884859274!3d36.93973560855257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c38f5bf81e2b1d%3A0xc472e7f58351ca8b!2sPEST%20STOP%20%C4%B0LA%C3%87LAMA%20(Faruk%20Ery%C4%B1lmaz)!5e0!3m2!1str!2str!4v1791923556901!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
